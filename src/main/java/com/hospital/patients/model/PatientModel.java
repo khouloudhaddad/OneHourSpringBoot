@@ -1,8 +1,11 @@
 package com.hospital.patients.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class PatientModel {
     List<String> names = new ArrayList<>();
 
