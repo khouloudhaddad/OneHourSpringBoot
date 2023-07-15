@@ -11,7 +11,11 @@ public class PatientService {
     private PatientModel patientModel;
 
     public String printName(String name) {
-        return patientModel.getPatientFromDatabase().toUpperCase();
+        String requiredName = patientModel.getNames()
+                .stream()
+                .filter(i->i==name)
+                .findAny().orElse("Nothing");
+        return requiredName.toUpperCase();
     }
     
 }

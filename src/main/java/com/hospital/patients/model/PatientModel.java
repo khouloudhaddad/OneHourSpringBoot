@@ -18,4 +18,8 @@ public class PatientModel {
     public String getPatientFromDatabase() {
         return names.get(0);
     }
+
+    public List<String> getNames() {
+        return names;
+    }
 }
