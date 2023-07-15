@@ -10,4 +10,9 @@ public class PatientController {
     public void printPatientName(){
         System.out.println("My name is ...");
     }
+
+    @GetMapping("/print-name-str")
+    public String printPatientNameStr() {
+        return "My name";
+    }
 }
