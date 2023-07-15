@@ -6,13 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PatientController {
 
-    @GetMapping("/print-name")
-    public void printPatientName(){
-        System.out.println("My name is ...");
-    }
+    @Autowired
+    private PatientController partientController; //bean
 
-    @GetMapping("/print-name-str")
-    public String printPatientNameStr() {
-        return "My name";
+    @GetMapping("/print-name")
+    public String printPatientName() {
+        partientController.printName("khouloud");
     }
+    
 }

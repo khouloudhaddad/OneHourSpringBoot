@@ -4,7 +4,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PatientService {
-    public String printName(String name){
+
+    public String printName(String name) {
         return name.toUpperCase();
     }
+    
 }
