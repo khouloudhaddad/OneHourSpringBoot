@@ -1,5 +1,6 @@
 package com.hospital.patients.controller;
 
+import com.hospital.patients.service.PatientService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class PatientController {
 
     @Autowired
-    private PatientController partientController; //bean
+    private PatientService patientService;
 
     @GetMapping("/print-name")
     public String printPatientName() {
-        partientController.printName("khouloud");
+       return patientService.printName("khouloud");
     }
-    
+
 }
